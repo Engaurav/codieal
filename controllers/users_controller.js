@@ -21,7 +21,7 @@ module.exports.signIn = function(req,res){
 }
 
 // get the sign up data
-module.exports.create = function(req,res){
+    module.exports.create = function(req,res){
     // TODO Later
     
     console.log(req.body);
