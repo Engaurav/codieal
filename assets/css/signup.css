@@ -1,0 +1,15 @@
+#signup-container{
+    width:300px;
+    margin: auto;
+    background-image: linear-gradient(185deg, #75b1ae, transparent);
+}
+#form{   
+     background-image: linear-gradient(171deg, #ffd9ced6, #2196f34a);
+}
+#button{
+    text-align: right;
+    margin-top: 10px;
+}
+#message{
+    display: block
+}

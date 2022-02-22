@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="/css/signup.css">
+<div id="container">
+    <div id="signup-container">
+        <form action="/users/create" method="POST" id="form" class="form-control">
+            <legend>Sign Up Form!</legend>
+            <label class="form-label">Email </label>
+            <input class="form-control" id="email" type="email" name="email" required>
+
+            <label>Password</label>
+            <input class="form-control" type="password" name="password" id="psd" required>
+
+            <label>Confirm Password</label>
+            <input class="form-control" type="password" name="cnf_psd" id="cnf_psd" required>
+            <span id="message"></span>
+
+
+            <label>Name</label>
+            <input class="form-control" type="name" name="name" required>
+
+            <div id="button">
+                <input class="btn-primary" type="submit" value="Sign Up!">
+            </div>
+            <script type="text/javascript" src="/javascripts/signup.js"></script>
+        </form>
+    </div>
+</div>
