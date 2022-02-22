@@ -1,3 +1,4 @@
+const { response } = require('express')
 const User = require('../models/user')
 
 module.exports.profile = function(req, res){
@@ -59,7 +60,30 @@ module.exports.create = function(req,res){
 
 
 //sign in create session for user
-module.exports.createSession = function(res,req){
-    // TODO Later
+module.exports.createSession = function(req,res){
+    //STEPS TO authenticate
+    // find user Later
+    console.log(req.body);
+    User.findOne({email: req.body.email},function(err,user){
+        if(err){
+            console.log('error in finding user signing up');
+            return;
+        }
+        
+        //handle user found
+        if(user.length!=0){
+            
+            // handle password which  not match
+            if(user.password != req.body.password){
+                return res.redirect('back');
+            }
+            res.cookie('user_id',user.id);
+            return res.redirect('/users/profile');
+            //handle session creation 
 
+        }else{
+            return res.redirect('back');
+        }
+    }); 
+    //handle user not found
 }

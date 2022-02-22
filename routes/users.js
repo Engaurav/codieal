@@ -13,4 +13,5 @@ router.get('/sign-in',usersConrtoller.signIn);
 //create user for sign up
 router.post('/create',usersConrtoller.create);
 
+router.post('/create-session',usersConrtoller.createSession);
 module.exports = router;
