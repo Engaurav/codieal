@@ -1,3 +1,26 @@
-body{
-    margin: 0;
-}
+body {
+  margin: 0;
+  background-color: gold; }
+
+#gap {
+  width: 100%;
+  position: fixed;
+  height: 68px;
+  background-color: white;
+  border-bottom: 2px solid lightgreen; }
+  #gap span {
+    width: 312px;
+    margin-top: 48px;
+    color: white;
+    position: absolute;
+    font-family: monospace;
+    margin-left: 0px;
+    font-size: 12px;
+    padding-left: 8px;
+    background-image: linear-gradient(76deg, #00c1ef, #de0083, transparent);
+    transition: 1s ease-in-out; }
+
+#gap-fill {
+  width: 100%;
+  height: 68px;
+  /* background-color: aquamarine; */ }

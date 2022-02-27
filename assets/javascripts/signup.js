@@ -1,4 +1,4 @@
-
+console.log("hello");
 //Check Password and confirm Password Equal
 
 $(document).ready(function(){

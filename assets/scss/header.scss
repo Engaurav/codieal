@@ -1,0 +1,130 @@
+nav{
+    background-color: lightgreen;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    div{
+        display: flex;
+        flex-direction: row;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content:end;
+        position: relative;
+        list-style: none;
+        margin-right: 5px;
+        li{
+            margin: 5px;
+            margin-top: 17px;
+            a{
+                text-decoration: none;
+                color: white;
+                font-family: unset;
+                font-size: larger;
+            }
+            a:hover{        
+                color: black;
+                border-bottom: 8px solid white;
+            }
+        }
+    }
+}
+#logo-name{
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+    padding-top: 6px;
+    margin-left: 4px;
+}
+.active{
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 4px;
+    padding-top: 0px;
+    padding-bottom: 12px;
+}
+
+#profile-pic{
+    img{
+        margin-top: 7px;
+        width: 38px;
+        height: 36px;
+        margin-right: 6px;
+        margin-left: 25px;
+
+    }
+    div{
+        display: none;
+        background-color: #e644a4;
+        color: white;
+        width: 77px;
+        position: absolute;
+        padding-left: 6px;
+        top: 45px;
+        border-top: 5px solid #4f92ff;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-bottom: 3px solid #4f92ff;
+    }
+}
+
+//for bar hide in and hide out
+#click{
+
+}
+#menu-button{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        ul{
+            position: fixed;
+            flex-direction: column;
+            background-image: linear-gradient(45deg, transparent,#2ac9d5,lightgreen,lightgreen);
+            top: 68px;
+            border-right: 2px solid violet;
+            height: 88%;
+            width: 150px;
+            justify-content: flex-start;
+            left: -100%;
+            transition: 0.5s ease-in-out;
+            li{
+                a{
+                    
+                }
+                a:hover{
+                    border: 0;
+                    border-left:5px solid #e644a4;
+                    border-right:10px solid #00a6e8;
+                }
+            }
+        }
+        #click:checked ~ ul {
+            left: 0%;
+        }
+    }
+    #profile-pic{
+        margin-top: 245px;
+        margin-left: -16px;
+    }
+    .active{
+        background-color: #e644a4;
+        padding: 0px 36px 11px 6px;
+        color: aliceblue;
+        border-right: 3px solid #00a6e8;
+    }
+    #menu-button{
+        display: block;
+        font-size: x-large;
+        cursor: pointer;
+        margin: 14px;
+    }
+}
+
