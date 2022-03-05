@@ -49,19 +49,18 @@
       color: darkslategray;
       width: 89%;
       margin-left: 29px; }
-    .home-container .posts-container div label {
+    .home-container .posts-container div h5 {
       margin-left: 29px;
       font-size: medium;
-      color: slategray;
-      cursor: pointer; }
+      color: slategray; }
+      .home-container .posts-container div h5 #down-arrow {
+        cursor: pointer; }
     .home-container .posts-container div .comments-container {
       background-color: white;
       border-radius: 10px;
       transition: ease-in-out 0.5s;
       width: 87%;
-      margin-left: 28px;
-      display: none;
-      transition: ease-in-out 0.5s; }
+      margin-left: 28px; }
       .home-container .posts-container div .comments-container a {
         margin-top: 13px;
         font-size: small;
@@ -91,6 +90,3 @@
   .home-container aside {
     width: 100%;
     float: none; } }
-
-.show {
-  display: block; }

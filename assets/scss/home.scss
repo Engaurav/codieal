@@ -1,4 +1,121 @@
-body{
-    // color: aliceblue;
-    // background-color: blanchedalmond;
+.home-container{
+    main{
+    // /border: solid 2px red;
+        width: 70%;
+        float: left;
+        .form-container{
+            margin-top: 20px;
+            background-color: #fbe0f0;
+            width: 97%;
+            border-radius: 15px;
+            padding: 4px;
+            margin-left: 21px;
+            h4{
+                color: blueviolet;
+                margin-left: 20px;
+            }
+            form{
+                text-align: right;
+                textarea{
+
+                    width: 95%;
+                    margin: 10px;
+                }
+                input{
+                    margin-right: 25px;
+                }
+            }
+        }
+      }
+      .posts-container{
+          margin-top: 30px;
+          h4{
+            color: brown;
+            margin-left: 36px;
+            font-size: xx-large;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          }
+          div{
+            background: #fbe0f0;
+            padding: 1px;
+            border-radius: 11px;
+            margin-left: 18px;
+            margin-bottom: 5px;
+            h6{
+                margin-top: 11px;
+                font-family: cursive;
+                margin-left: 15px;
+                color: brown;
+            }
+            a{
+                float: right;
+                margin-top: 21px;
+                color: #1e88e5;
+                margin-right: 31px;
+            }
+            a:hover{
+                color: red;
+            }
+            p{
+                font-size: small;
+                color: darkslategray;
+                width: 89%;
+                margin-left: 29px;
+            }
+            label{
+                margin-left: 29px;
+                font-size: medium;
+                color: slategray;
+                cursor: pointer;
+            }
+            .comments-container{
+                background-color: white;
+                border-radius: 10px;
+                transition: ease-in-out 0.5s;
+                width: 87%;
+                margin-left: 28px;
+                display: none;
+                transition: ease-in-out 0.5s;
+                a{
+                    margin-top: 13px;
+                    font-size: small;
+                    color: darkcyan;
+                }
+                h6{
+                    font-family: 'Courier New', Courier, monospace;
+                    color: lightslategray;
+                }
+                div{
+                    background-color: white;
+                }
+                p{
+                    background-color: dimgray;
+                    color: white;
+                    padding: 6px;
+                    border-radius: 14px;
+                }
+            }
+          }
+      }
+
+    aside{
+    margin-top: 20px;
+    border: solid 2px blue;
+    width: 30%;
+    float: right;
+    height: 200px;
+    }
+    @media screen and (max-width: 600px){
+        main{
+            width: 100%;
+            float: none;
+        }
+        aside{
+            width: 100%;
+            float: none;
+        }
+    }
+}
+.show{
+    display: block;
 }

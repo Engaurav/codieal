@@ -10,18 +10,32 @@
         <link rel="stylesheet" type="text/css" href="/css/home.css">
         
         <!-- <%- include('_header'); %> -->
-
-        <h1>Codeial / <%= title %></h1>
-        <section id="feed-post">
-            <h4>Posts</h4>
-            <form action="" method="POST" id="new-post-form">
-                <caption>Add Post</caption>
-                <textarea name="content" cols="30" rows="3"></textarea>
-                <input type="submit" value="Post"> 
-            </form>
-        </section>
+        <div class="home-container">
+            <main>
+                <%if (locals.user){%>
+                <div class="form-container">
+                    <h4>Add Post</h4>
+                    <form action="/posts/create" method="POST" id="new-post-form">
+                        <textarea class="form-control" name="content" cols="30" rows="3" placeholder="Type here..."></textarea>
+                        <input class="btn btn-primary" type="submit" value="Add Post"> 
+                    </form>
+                </div>
+                <%  } %>
+                <div class="posts-container">
+                    <h4>Posts </h4>
+                    <%  for (post of posts){%>
+                        <%- include('_post.ejs') -%>
+                    <%  }%> 
+                </div>
+            </main>
+            <aside>
+    
+            </aside>
+        </div>
+        
 
         <!-- <%- include('_footer'); %> -->
-    
+        
+        <script type="text/javascript" src="/javascripts/home.js"></script>
     </body>
 <!-- </html> -->

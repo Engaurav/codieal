@@ -1,0 +1,11 @@
+<div class="comment-box">
+    <% if ((locals.user) && (locals.user.id == comment.user.id)){ %>
+        <a href="/comments/destroy/<%= comment.id %>"><i class="fas fa-trash-alt"></i></a>
+    <% } %>
+    <h6>
+        <%= comment.user.name    %>
+    </h6>
+    <p> 
+        <%= comment.content %> 
+    </p>
+</div>
