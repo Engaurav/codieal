@@ -99,11 +99,15 @@
       }
 
     aside{
-    margin-top: 20px;
-    border: solid 2px blue;
-    width: 30%;
-    float: right;
-    height: 200px;
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: 3px;
+        width: 28%;
+        float: right;
+        height: 200px;
+        padding-left: 39px;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        padding-top: 15px;
     }
     @media screen and (max-width: 600px){
         main{
@@ -111,6 +115,7 @@
             float: none;
         }
         aside{
+            border: none;
             width: 100%;
             float: none;
         }

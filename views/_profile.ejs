@@ -1,0 +1,31 @@
+<div class="profile-container">
+    <main>
+        <% if(user.id == profile_user.id){%>
+            <div class="profile-view">
+                <input type="button" class="btn btn-info" value="Edit" id="edit-button">
+                <p><%= profile_user.name%> </p> 
+                <p>Email : <%= profile_user.email%> </p>
+            </div>
+
+            <div class="profile-form">
+                <i class="fas fa-times"></i>
+                <form class="form-control" action="/users/update/<%= profile_user.id%> " method="POST">
+                    <input class="form-control" type="text" name="name" value="<%=profile_user.name%>" required>
+                    <input class="form-control" type="email" name="email" value="<%= profile_user.email%>" required>
+                    <input class="btn btn-danger" type="submit" value="Update">
+                </form>
+            </div>
+            
+
+
+        <%}else{%>
+            <div class="profile-view">
+                <p><%= profile_user.name%> </p> 
+                <p>Email : <%= profile_user.email%> </p>
+            </div>
+        <% } %>    
+    </main>
+    <aside>
+
+    </aside>
+</div>

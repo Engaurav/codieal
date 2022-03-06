@@ -1,0 +1,35 @@
+.profile-container main {
+  width: 70%;
+  float: left; }
+  .profile-container main .profile-view #edit-button {
+    float: right;
+    margin: 8px; }
+  .profile-container main .profile-form {
+    display: none; }
+    .profile-container main .profile-form .fa-times {
+      float: right;
+      margin: 8px;
+      font-size: large;
+      color: rgba(8, 8, 8, 0.452);
+      cursor: pointer;
+      transition: ease-in-out 0.2s; }
+    .profile-container main .profile-form .fa-times:hover {
+      color: red;
+      transform: scale(1.2); }
+    .profile-container main .profile-form form {
+      text-align: right; }
+      .profile-container main .profile-form form input {
+        margin: 5px; }
+
+.profile-container aside {
+  border-left: 2px solid blue;
+  width: 30%;
+  float: right; }
+
+@media screen and (max-width: 600px) {
+  .profile-container main {
+    width: 100%;
+    float: none; }
+  .profile-container aside {
+    width: 100%;
+    float: none; } }

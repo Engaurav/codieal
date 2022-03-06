@@ -8,5 +8,5 @@ $('.home-container .posts-container div label').on('click', function(){
         $('.comments-container').css('display','none');
         $(this).next().css('display','none');
     }
-    
 });
+

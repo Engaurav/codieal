@@ -1,9 +1,25 @@
 const User = require('../models/user')
 
 module.exports.profile = function (req, res) {
-    return res.render('user_profile', {
-        title: 'User Profile'
-    })
+    User.findById(req.params.id,function(err,user){
+        return res.render('user_profile', {
+            title: 'User Profile',
+            profile_user : user
+        });
+    });
+    
+}
+
+//update profile
+module.exports.update = function(req,res){
+    if(req.user.id == req.params.id){
+        User.findByIdAndUpdate(req.user.id,req.body,function(err,user){
+            return res.redirect('back');
+        });
+    }
+    else{
+        return res.status(401).send('Unauthorized');
+    }
 }
 
 //render signup page
@@ -19,7 +35,7 @@ module.exports.signup = function (req, res) {
 //rednder signin page
 module.exports.signIn = function (req, res) {
     if (req.isAuthenticated()) {
-        return res.redirect('/users/profile');
+        return res.redirect('/');
     }
     return res.render('signin', {
         title: "Codeial | SignIn",
@@ -28,11 +44,6 @@ module.exports.signIn = function (req, res) {
 
 // get the sign up data
 module.exports.create = function (req, res) {
-    // TODO Later
-
-    console.log(req.body);
-    console.log(req.body.password);
-    console.log(req.body.cnf_psd);
     if (req.body.password != req.body.cnf_psd) {
         return res.redirect('back');
     }
@@ -66,7 +77,7 @@ module.exports.create = function (req, res) {
 //sign in create session for user
 module.exports.createSession = function (req, res) {
     // TODO Later
-    return res.redirect('/users/profile');
+    return res.redirect('/');
 
 }
 

@@ -1,0 +1,49 @@
+.profile-container{
+    main{
+        width: 70%;
+        float: left;
+        .profile-view{
+            #edit-button{
+                float: right;
+                margin: 8px;
+            }    
+        }
+        .profile-form{
+            display: none;
+            .fa-times{
+                float: right;
+                margin: 8px;
+                font-size: large;
+                color: rgba(8, 8, 8, 0.452);
+                cursor: pointer;
+                transition: ease-in-out 0.2s;
+            }
+            .fa-times:hover{
+                color: red;
+                transform: scale(1.2);
+            }
+            form{
+                text-align: right;
+                input{
+                    margin: 5px;
+                }
+            }    
+        }
+    }
+    aside{
+        border-left: 2px solid blue;
+        width: 30%;
+        float: right;
+    }
+    @media screen and (max-width : 600px) {
+        main{
+            width: 100%;
+            float: none;
+        }
+        aside{
+            width: 100%;
+            float: none;
+        }
+    }
+ 
+}
