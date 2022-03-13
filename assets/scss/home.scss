@@ -27,14 +27,15 @@
             }
         }
       }
+      #post-h4{
+        color: brown;
+        margin-top: 20px;
+        margin-left: 36px;
+        font-size: xx-large;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
       .posts-container{
-          margin-top: 30px;
-          h4{
-            color: brown;
-            margin-left: 36px;
-            font-size: xx-large;
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-          }
+          margin-top: 10px;
           div{
             background: #fbe0f0;
             padding: 1px;

@@ -1,6 +1,6 @@
-<div>
+<div id="post-<%= post._id %>">
     <% if ((locals.user) && (locals.user.id == post.user.id)){ %>
-        <a href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash-alt"></i></a>
+        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash-alt"></i></a>
     <% } %>
 
         <h6>

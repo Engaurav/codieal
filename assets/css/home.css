@@ -19,13 +19,15 @@
       .home-container main .form-container form input {
         margin-right: 25px; }
 
+.home-container #post-h4 {
+  color: brown;
+  margin-top: 20px;
+  margin-left: 36px;
+  font-size: xx-large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+
 .home-container .posts-container {
-  margin-top: 30px; }
-  .home-container .posts-container h4 {
-    color: brown;
-    margin-left: 36px;
-    font-size: xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+  margin-top: 10px; }
   .home-container .posts-container div {
     background: #fbe0f0;
     padding: 1px;
