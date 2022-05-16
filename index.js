@@ -9,6 +9,7 @@ const db = require('./config/mongoose')
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const passportJWT = require('./config/passport-jwt-strategy');
 const MongoStore = require('connect-mongo');
 const sassMiddleware = require('node-sass-middleware')
 const flash = require('connect-flash');
@@ -33,15 +34,15 @@ app.use(express.static('./assets'));
 
 
 //make the upload path available to browser
-app.use('/uploads',express.static(__dirname+'/uploads'))
+app.use('/uploads', express.static(__dirname + '/uploads'))
 
 
 // expess layout npm install express-ejs-layouts)
 app.use(expressLayouts);
 
 //extract style and script from webpages into the layout
-app.set('layout extractStyles',true)
-app.set('layout extractScripts',true)
+app.set('layout extractStyles', true)
+app.set('layout extractScripts', true)
 
 
 
@@ -57,19 +58,17 @@ app.use(session({
     name: 'codeial',
     //todo change secret before deployment 
     secret: 'blaasomething',
-    saveUninitialized : false,
+    saveUninitialized: false,
     resave: false,
-    cookie:{
-        maxAge:(1000*60*100)
+    cookie: {
+        maxAge: (1000 * 60 * 100)
     },
-    store: MongoStore.create(
-        {
-           mongoUrl: 'mongodb://localhost/codeial_development',
-           autoRemove: 'disabled',
-        },function(err){
-            console.log(err||'connect mongo db setup ok ');
-        }
-    )
+    store: MongoStore.create({
+        mongoUrl: 'mongodb://localhost/codeial_development',
+        autoRemove: 'disabled',
+    }, function(err) {
+        console.log(err || 'connect mongo db setup ok ');
+    })
 
 }));
 
@@ -86,8 +85,8 @@ app.use(customMware.setFlash);
 // use express router
 app.use('/', require('./routes'));
 
-app.listen(port, function(err){
-    if (err){
+app.listen(port, function(err) {
+    if (err) {
         console.log(`Error in running the server: ${err}`);
     }
 
