@@ -1,4 +1,5 @@
 const express = require('express');
+const env = require('./config/environments')
 const cookieParser = require('cookie-parser');
 const expressLayouts = require('express-ejs-layouts');
 const app = express();
@@ -16,11 +17,13 @@ const MongoStore = require('connect-mongo');
 const sassMiddleware = require('node-sass-middleware')
 const flash = require('connect-flash');
 const customMware = require('./config/middleware')
+const path = require('path');
+
 
 //for scss middleware
 app.use(sassMiddleware({
-    src: './assets/scss',
-    dest: './assets/css',
+    src: path.join(__dirname,env.asset_path,'/scss'),
+    dest:path.join(__dirname,env.asset_path,'/css'),
     debug: true,
     outputStyle: 'extended',
     prefix: '/css'
@@ -31,7 +34,7 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 // connect static directory
-app.use(express.static('./assets'));
+app.use(express.static(env.asset_path));
 
 
 
@@ -59,7 +62,7 @@ app.set('views', './views');
 app.use(session({
     name: 'codeial',
     //todo change secret before deployment 
-    secret: 'blaasomething',
+    secret: env.session_cookie_key,
     saveUninitialized: false,
     resave: false,
     cookie: {
