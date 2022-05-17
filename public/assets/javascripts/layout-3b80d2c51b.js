@@ -1,0 +1,1 @@
+$("#gap span").delay(1e3).css("width","200px");

@@ -1,0 +1,92 @@
+.home-container main {
+  width: 70%;
+  float: left; }
+  .home-container main .form-container {
+    margin-top: 20px;
+    background-color: #fbe0f0;
+    width: 97%;
+    border-radius: 15px;
+    padding: 4px;
+    margin-left: 21px; }
+    .home-container main .form-container h4 {
+      color: blueviolet;
+      margin-left: 20px; }
+    .home-container main .form-container form {
+      text-align: right; }
+      .home-container main .form-container form textarea {
+        width: 95%;
+        margin: 10px; }
+      .home-container main .form-container form input {
+        margin-right: 25px; }
+
+.home-container .posts-container {
+  margin-top: 30px; }
+  .home-container .posts-container h4 {
+    color: brown;
+    margin-left: 36px;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+  .home-container .posts-container div {
+    background: #fbe0f0;
+    padding: 1px;
+    border-radius: 11px;
+    margin-left: 18px;
+    margin-bottom: 5px; }
+    .home-container .posts-container div h6 {
+      margin-top: 11px;
+      font-family: cursive;
+      margin-left: 15px;
+      color: brown; }
+    .home-container .posts-container div a {
+      float: right;
+      margin-top: 21px;
+      color: #1e88e5;
+      margin-right: 31px; }
+    .home-container .posts-container div a:hover {
+      color: red; }
+    .home-container .posts-container div p {
+      font-size: small;
+      color: darkslategray;
+      width: 89%;
+      margin-left: 29px; }
+    .home-container .posts-container div h5 {
+      margin-left: 29px;
+      font-size: medium;
+      color: slategray; }
+      .home-container .posts-container div h5 #down-arrow {
+        cursor: pointer; }
+    .home-container .posts-container div .comments-container {
+      background-color: white;
+      border-radius: 10px;
+      transition: ease-in-out 0.5s;
+      width: 87%;
+      margin-left: 28px; }
+      .home-container .posts-container div .comments-container a {
+        margin-top: 13px;
+        font-size: small;
+        color: darkcyan; }
+      .home-container .posts-container div .comments-container h6 {
+        font-family: 'Courier New', Courier, monospace;
+        color: lightslategray; }
+      .home-container .posts-container div .comments-container div {
+        background-color: white; }
+      .home-container .posts-container div .comments-container p {
+        background-color: dimgray;
+        color: white;
+        padding: 6px;
+        border-radius: 14px; }
+
+.home-container aside {
+  margin-top: 20px;
+  border: solid 2px blue;
+  width: 30%;
+  float: right;
+  height: 200px; }
+
+@media screen and (max-width: 600px) {
+  .home-container main {
+    width: 100%;
+    float: none; }
+  .home-container aside {
+    width: 100%;
+    float: none; } }

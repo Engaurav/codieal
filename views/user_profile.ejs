@@ -7,7 +7,7 @@
 
     <body>
         <%- include('_header'); %> -->
-        <link rel="stylesheet" type="text/css" href="/css/user_profile.css">
+        <link rel="stylesheet" type="text/css" href="<%= assetPath('css/user_profile.css')%>">
         <h1>
             Codeial / Profile Page
         </h1>
@@ -16,7 +16,7 @@
         <%- include('_profile.ejs') -%>
 
         
-        <script type="text/javascript" src="/javascripts/user_profile.js"></script>
+        <script type="text/javascript" src="<%= assetPath('javascripts/user_profile.js')%>"></script>
     <!-- <%- include('_footer'); %>
         
     </body>

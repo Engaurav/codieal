@@ -1,0 +1,1 @@
+$((function(){var a=location.pathname;$("nav ul li a").each((function(){var t=$(this);t.attr("href")==a&&t.addClass("active")}))}));
