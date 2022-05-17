@@ -1,4 +1,9 @@
 <link rel="stylesheet" type="text/css" href="/css/signup.css">
+
+<link   rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
 <div id="container">
     <div id="signup-container">
         <form action="/users/create" method="POST" id="form" class="form-control">
@@ -22,5 +27,18 @@
             </div>
             <script type="text/javascript" src="/javascripts/signup.js"></script>
         </form>
+        <div class="row">
+            <div class="col-md" style="text-align:center;">
+              <a class="btn btn-outline-dark" href="/users/auth/google" role="button" style="text-transform:none;width: 100%;">
+                <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                Sign Up with Google
+              </a>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+        crossorigin="anonymous">
+</script>
