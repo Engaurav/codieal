@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const env = require('./config/environments')
 const cookieParser = require('cookie-parser');
@@ -90,10 +91,10 @@ app.use(customMware.setFlash);
 // use express router
 app.use('/', require('./routes'));
 
-app.listen(port, function(err) {
+app.listen(process.env.CODEIAL_PORT, function(err) {
     if (err) {
         console.log(`Error in running the server: ${err}`);
     }
 
-    console.log(`Server is running on port: ${port}`);
+    console.log(`Server is running on port: ${process.env.CODEIAL_PORT}`);
 });
